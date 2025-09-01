@@ -1,7 +1,7 @@
 # Pemrograman-Web
 
 ## Tugas Profil
-```
+```html
 <!DOCTYPE html>
 
 <html lang="en">
