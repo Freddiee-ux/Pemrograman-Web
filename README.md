@@ -1,4 +1,206 @@
 # Pemrograman-Web
 
 ## Tugas Profil
+```
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1e3a8a; 
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;  
+            margin: 20px auto;  
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .profile {
+            display: flex;         
+            align-items: center;   
+            margin-bottom: 30px;
+        }
+
+        .profile img {
+            width: 150px;
+            height: auto;
+            object-fit: cover;    
+            margin-right: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;      
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #163273;
+        }
+
+        .social a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+
+        .social a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Profil Ferdian Ardra Hafizhan</h1>
+    </header>
+
+    <div class="container">
+        <section class="profile">
+            <img src="WhatsApp Image 2025-09-01 at 09.23.08_7b9ad036.jpg" alt="Foto Profil">
+            <p>
+                Halo! Nama saya <b>Ferdian</b>, mahasiswa Informatika ITS 2024. 
+                Saya memiliki ketertarikan dalam bidang sistem operasi, data structure, dan AI. 
+                Selain itu,  sangat antusisas dalam mencari peluang untuk berkontribusi dalam kegiatan 
+                di luar akademik untuk mengembangkan soft skills seperti kepemimpinan, kerja sama tim, serta manajemen waktu.
+            </p>
+        </section>
+
+        <section>
+            <h2>Hobi</h2>
+            <ul>
+                <li>Bermain basket</li>
+                <li>Programming (C, C++, Python)</li>
+                <li>Mendengarkan musik</li>
+                <li>Menulis dan membuat project kreatif</li>
+            </ul>
+        </section>
+
+        <!-- Tabel Riwayat Pendidikan -->
+        <section>
+            <h2>Riwayat Pendidikan</h2>
+            <table>
+                <tr>
+                    <th>Tingkat</th>
+                    <th>Institusi</th>
+                    <th>Tahun</th>
+                </tr>
+                <tr>
+                    <td>SMA</td>
+                    <td>SMAN 5 Surabaya</td>
+                    <td>2021 - 2024</td>
+                </tr>
+                <tr>
+                    <td>S1</td>
+                    <td>Institut Teknologi Sepuluh Nopember (ITS) - Informatika</td>
+                    <td>2024 - Sekarang</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Form Kontak -->
+        <section>
+            <h2>Kontak Saya</h2>
+            <form>
+                <div>
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" placeholder="Masukkan nama Anda">
+                </div>
+                <div>
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" placeholder="Masukkan email Anda">
+                </div>
+                <div>
+                    <label for="message">Pesan</label>
+                    <textarea id="message" rows="4" placeholder="Tulis pesan Anda..."></textarea>
+                </div>
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+
+        <!-- Link Media Sosial -->
+        <section class="social">
+            <h2>Media Sosial</h2>
+            <a href="https://instagram.com/ferdianardr/" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/in/ferdian-ardra-hafizhan-880387327/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Freddiee-ux" target="_blank">GitHub</a>
+        </section>
+    </div>
+
+</body>
+
+</html>
+```
 <img width="789" height="791" alt="image" src="https://github.com/user-attachments/assets/ca13f8a0-241a-41fd-b257-f28a390bd33e" />
