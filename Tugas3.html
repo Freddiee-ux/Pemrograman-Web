@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            margin: auto;
+        }
+        header{
+            text-align: center;
+        }
+        .form-header{
+            color: #4CAF50;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input, textarea, select {
+            margin-top: 5px;
+            padding: 5px;
+        }
+        input[type="submit"] {
+            margin-top: 15px;
+            padding: 8px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(69, 161, 73);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center">Tabel data mahasiswa</h1>
+    </header>
+        <table border="1" bgcolor="white" align="center">
+        <tr bgcolor="gray" align="center">
+            <th rowspan="2">No</th>
+            <th rowspan="2">NPM</th>
+            <th rowspan="2">Nama</th>
+            <th colspan="2">Nilai</th>
+        </tr>
+        <tr bgcolor="gray" align="center">
+            <th>UTS</th>
+            <th>EAS</th>
+        </tr>
+        <tr align="center">
+            <td>1</td>
+            <td>06.100.001</td>
+            <td align="left">Amin A Angkasa</td>
+            <td>70</td>
+            <td>80</td>
+        </tr>
+        <tr align="center">
+            <td>2</td>
+            <td>06.100.002</td>
+            <td align="left">Beni B. Bernardi</td>
+            <td>70</td>
+            <td>80</td>
+        </tr>
+        </table>
+
+    <header class="form-header">
+        <h1 align="center">Regristration Form</h1>
+    </header>
+    <div class="container">
+        <form action="/submit" method="post">
+            
+            <label for="firstname">First Name:</label><br>
+            <input type="text" id="firstname" name="firstname" required>
+            <br>
+
+            <label for="lastname">Last Name:</label><br>
+            <input type="text" id="lastname" name="lastname" required>
+            <br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+            <br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required>
+            <br>
+
+            <label for="confirmpassword">Confirm Password:</label><br>
+            <input type="password" id="confirmpassword" name="confirmpassword" required>
+            <br>
+
+            <label for="contact">Contact Number:</label><br>
+            <input type="tel" id="contact" name="contact" required>
+            <br>
+            
+            <label for="gender">Gender:</label><br>
+            <select name="gender" id="gender" required>
+                <option value="ML">Male</option>
+                <option value="FML">Female</option>
+                <option value="OTR">Other</option>
+            </select>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+</body>
+</html>
