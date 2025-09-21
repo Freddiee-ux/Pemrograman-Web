@@ -1,1 +1,201 @@
+## Tugas 4 CSS
+```html
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio - Example</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+ 
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #fafafa;
+      color: #222;
+      line-height: 1.45;
+      padding: 36px 18px;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 28px;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+
+    .site-brand {
+      color: #1b7a3f; 
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+    .site-tag {
+      color: #666;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    h1.section-title {
+      font-size: 22px;
+      margin: 18px 0 20px;
+      color: #222;
+    }
+
+ 
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 6px;
+      border: 1px solid rgba(0,0,0,0.06);
+      padding: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 200px;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+
+    .card-badge {
+      position: relative;
+      align-self: flex-start;
+      font-size: 12px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.2px;
+    }
+
+    .badge-html { background: linear-gradient(90deg,#e44d26,#f06b2d); } /* orange */
+    .badge-css  { background: linear-gradient(90deg,#264de4,#3972ff); } /* biru */
+    .badge-php  { background: linear-gradient(90deg,#8892bf,#6f6fb3); } /* ungu */
+    .badge-js   { background: linear-gradient(90deg,#f0db4f,#ffd84b); color:#111; } /* kuning */
+
+    .thumb {
+      width: 100%;
+      height: 70px;
+      border-radius: 4px;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .learn-link {
+      text-decoration: none;
+      font-size: 13px;
+      color: #0a66c2;
+      border-bottom: 1px dashed rgba(10,102,194,0.2);
+    }
+
+    @media (max-width: 900px) {
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      body { padding: 18px 10px; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .thumb { height: 90px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="site-brand">GeeksforGeeks</div>
+    <div class="site-tag">A Computer Science Portal for Geeks</div>
+
+    <h1 class="section-title">Portfolio</h1>
+
+    <div class="portfolio-grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="card-badge badge-html">HTML</div>
+        <div class="thumb" style="background-image:url('https://tse4.mm.bing.net/th/id/OIP.jeZsuU5LdX-gGxOKWRPpagHaEJ?pid=Api&P=0&h=220');"></div>
+        <div class="card-title">HTML Tutorial</div>
+        <div class="card-desc">
+          HTML stands for Hyper Text Markup Language. It is used to design web pages using markup.
+        </div>
+        <div class="card-footer">
+          <a class="learn-link" href="https://www.geeksforgeeks.org/html/html-tutorial/">Read more →</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="card-badge badge-css">CSS</div>
+        <div class="thumb" style="background-image:url('https://tse2.mm.bing.net/th/id/OIP.ZDHuUOW43OxLT3B4caU6wQHaDt?pid=Api&P=0&h=220');"></div>
+        <div class="card-title">CSS Tutorials</div>
+        <div class="card-desc">
+          Cascading Style Sheets (CSS) is a style sheet language used for describing the look of documents.
+        </div>
+        <div class="card-footer">
+          <a class="learn-link" href="https://www.geeksforgeeks.org/css/css-tutorial/">Read more →</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="card-badge badge-php">PHP</div>
+        <div class="thumb" style="background-image:url('https://tse1.mm.bing.net/th/id/OIP.8-9NeAXurAgSc4x3tT_KMQHaFW?pid=Api&P=0&h=220');"></div>
+        <div class="card-title">PHP Tutorials</div>
+        <div class="card-desc">
+          PHP is a server-side scripting language designed for web development and general-purpose programming.
+        </div>
+        <div class="card-footer">
+          <a class="learn-link" href="https://www.geeksforgeeks.org/php/php-tutorial/">Read more →</a>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="card-badge badge-js">JAVASCRIPT</div>
+        <div class="thumb" style="background-image:url('https://repository-images.githubusercontent.com/657736250/efe020c3-cfc2-41f9-be41-ad581ffc9969');"></div>
+        <div class="card-title">JavaScript Tutorials</div>
+        <div class="card-desc">
+          JavaScript is a scripting language used to create and control dynamic website content.
+        </div>
+        <div class="card-footer">
+          <a class="learn-link" href="https://www.geeksforgeeks.org/javascript/javascript-tutorial/" >Read more →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</body>
+</html>
+```
 
