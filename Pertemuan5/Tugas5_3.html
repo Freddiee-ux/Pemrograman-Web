@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Dinamis</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        select {
+            width: 200px;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Dropdown Dinamis</h2>
+
+    <div>
+        <label for="produk">Pilih Produk:</label>
+        <select id="produk" name="produk">
+            <option value="">--Pilih Kategori Produk--</option>
+            <option value="elektronik">Elektronik</option>
+            <option value="pakaian">Pakaian</option>
+            <option value="otomotif">Otomotif</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="merk">Pilih Merk:</label>
+        <select id="merk" name="merk">
+            <option value="">--Pilih Produk Terlebih Dahulu--</option>
+        </select>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dataMerk = {
+                elektronik: ["Samsung", "LG", "Sony", "Apple", "Xiaomi"],
+                pakaian: ["Nike", "Adidas", "Uniqlo", "H&M", "Zara"],
+                otomotif: ["Toyota", "Honda", "Suzuki", "BMW", "Mercedes-Benz"]
+            };
+
+            const produkDropdown = document.getElementById('produk');
+            const merkDropdown = document.getElementById('merk');
+
+            produkDropdown.addEventListener('change', function() {
+                // Ambil nilai produk yang dipilih
+                const selectedProduk = this.value;
+
+                // Kosongkan dropdown merk
+                merkDropdown.innerHTML = '';
+
+                if (selectedProduk) {
+                    // Dapatkan daftar merk berdasarkan produk yang dipilih
+                    const merks = dataMerk[selectedProduk];
+
+                    // Tambahkan opsi default
+                    let defaultOption = document.createElement('option');
+                    defaultOption.value = "";
+                    defaultOption.textContent = "--Pilih Merk--";
+                    merkDropdown.appendChild(defaultOption);
+
+                    // Isi dropdown merk dengan data yang sesuai
+                    merks.forEach(function(merk) {
+                        let option = document.createElement('option');
+                        option.value = merk.toLowerCase().replace(/ /g, '-');
+                        option.textContent = merk;
+                        merkDropdown.appendChild(option);
+                    });
+                } else {
+                    // Jika tidak ada produk yang dipilih
+                    let defaultOption = document.createElement('option');
+                    defaultOption.value = "";
+                    defaultOption.textContent = "--Pilih Produk Terlebih Dahulu--";
+                    merkDropdown.appendChild(defaultOption);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
