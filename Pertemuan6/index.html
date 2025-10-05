@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login — Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    html,body { height: 100%; }
+    .login { min-height: 100vh; }
+    .bg-image {
+      background-image: url('_DSC0624.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .login-heading { font-weight: 300; }
+    .btn-login { font-size: 0.9rem; letter-spacing: 0.05rem; padding: 0.75rem 1rem; }
+  </style>
+</head>
+<body>
+  <div class="container-fluid ps-md-0">
+    <div class="row g-0">
+      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image" role="img" aria-label="Decorative background"></div>
+
+      <div class="col-md-8 col-lg-6">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-9 col-lg-8 mx-auto">
+                <h3 class="login-heading mb-4">Welcome back!</h3>
+
+                <form onsubmit="doLogin(event)" novalidate>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="username" placeholder="name@example.com" aria-label="Email atau username" required>
+                    <label for="username">Email atau Username</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="password" placeholder="Password" aria-label="Password" required>
+                    <label for="password">Password</label>
+                  </div>
+
+                  <div id="loginError" class="mb-2 text-danger small" aria-live="polite" style="display:none;"></div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                    <label class="form-check-label" for="rememberPasswordCheck">Remember password</label>
+                  </div>
+
+                  <div class="d-grid">
+                    <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
+                    <div class="text-center">
+                      <a class="small" href="#">Forgot password?</a>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <script>
+
+    if (sessionStorage.getItem('loggedIn') === 'true') {
+      console.log('Already logged in — redirecting to content.html');
+      window.location.href = 'content.html';
+    }
+
+    function doLogin(e) {
+      e.preventDefault();
+      const u = document.getElementById('username').value.trim();
+      const p = document.getElementById('password').value.trim();
+      const errEl = document.getElementById('loginError');
+
+      errEl.style.display = 'none';
+      errEl.textContent = '';
+
+      console.log('doLogin called', { u, p });
+
+      if (!u || !p) {
+        errEl.textContent = 'Isi username dan password terlebih dahulu.';
+        errEl.style.display = 'block';
+        return false;
+      }
+
+      sessionStorage.setItem('loggedIn', 'true');
+      sessionStorage.setItem('username', u);
+
+      console.log('Login success — redirecting to content.html');
+      window.location.href = 'content.html';
+      return false;
+    }
+  </script>
+</body>
+</html>
+
