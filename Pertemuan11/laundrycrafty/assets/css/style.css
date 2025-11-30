@@ -1,0 +1,16 @@
+body {
+    background-color: #f5f7fa;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
