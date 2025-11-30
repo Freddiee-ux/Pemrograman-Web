@@ -23,6 +23,7 @@ Website ini menyediakan berbagai fitur penting yang digunakan oleh admin maupun 
 3. Transaksi Laundry
 
   Kasir dapat mencatat transaksi pelanggan, termasuk:
+  
     - memilih pelanggan
     - memilih jenis layanan
     - memasukkan berat cucian
@@ -30,6 +31,7 @@ Website ini menyediakan berbagai fitur penting yang digunakan oleh admin maupun 
     - menentukan tanggal masuk dan tanggal selesai
   
   Terdapat juga fitur untuk memperbarui status cucian:
+  
     - Proses
     - Selesai
     - Sudah Diambil
@@ -37,6 +39,7 @@ Website ini menyediakan berbagai fitur penting yang digunakan oleh admin maupun 
 4. Dashboard Statistik
   
   Halaman dashboard menampilkan:
+  
     - Total pelanggan
     - Total transaksi hari ini
     - Total pendapatan hari ini
@@ -45,6 +48,7 @@ Website ini menyediakan berbagai fitur penting yang digunakan oleh admin maupun 
 5. Laporan Pendapatan
 
   Admin dapat melihat laporan keuangan berdasarkan:
+  
     - filter tanggal
     - pendapatan harian
     - total transaksi pada periode tertentu
@@ -53,6 +57,7 @@ Website ini menyediakan berbagai fitur penting yang digunakan oleh admin maupun 
 6. Keamanan Login
 
   Sistem dilengkapi autentikasi admin:
+  
     - password di-hash dengan password_hash()
     - session digunakan untuk keamanan halaman
     - tombol logout tersedia
